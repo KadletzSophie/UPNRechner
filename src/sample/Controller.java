@@ -7,6 +7,11 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+/**
+ * @author Sophie Kadletz
+ * @version 21.12.2020
+ */
+
 public class Controller {
     private UPNModel model;
 
@@ -16,68 +21,6 @@ public class Controller {
     @FXML
     private TextArea stack_txt;
 
-    @FXML
-    private Button bt_7;
-
-    @FXML
-    private Button bt_4;
-
-    @FXML
-    private Button bt_1;
-
-    @FXML
-    private Button bt_0;
-
-    @FXML
-    private Button bt_8;
-
-    @FXML
-    private Button bt_5;
-
-    @FXML
-    private Button bt_2;
-
-    @FXML
-    private Button komma_bt;
-
-    @FXML
-    private Button bt_9;
-
-    @FXML
-    private Button bt_6;
-
-    @FXML
-    private Button bt_3;
-
-    @FXML
-    private Button vorzeichen_bt;
-
-    @FXML
-    private Button enter_bt;
-
-    @FXML
-    private Button c_bt;
-
-    @FXML
-    private Button ce_bt;
-
-    @FXML
-    private Button plus_bt;
-
-    @FXML
-    private Button mal_bt;
-
-    @FXML
-    private Button kehrwert_bt;
-
-    @FXML
-    private Button minus_bt;
-
-    @FXML
-    private Button durch_bt;
-
-    @FXML
-    private Button vertauschen_bt;
 
     @FXML
     public void enterNumber(ActionEvent event) {
@@ -86,7 +29,7 @@ public class Controller {
     }
 
     @FXML
-    public void enterComma() {
+    public void enterComma() {  //Alle möglichen Fälle überlegt was sein kann wenn man ein Komma eingibt
         String tmp = eingabe_txt.getText();
         if (!tmp.contains(",")) {
             if (tmp.isEmpty()) {
@@ -100,7 +43,7 @@ public class Controller {
     }
 
     @FXML
-    public void enterSign() {
+    public void enterSign() { //Ändert das Vorzeichen
         if (eingabe_txt.getText().contains("-")) {
             String tmp = eingabe_txt.getText();
             tmp = tmp.substring(1);
@@ -113,37 +56,37 @@ public class Controller {
     }
 
     @FXML
-    public void addStackNumbers() {
+    public void addStackNumbers() { //Rechenoperation: +
         confirmNumber();
         stack_txt.setText(checkMessage(model.addStackNumbers()));
     }
 
     @FXML
-    public void substractStackNumbers() {
+    public void substractStackNumbers() { //Rechenoperation: -
         confirmNumber();
         stack_txt.setText(checkMessage(model.substractStackNumbers()));
     }
 
     @FXML
-    public void multiplyStackNumbers() {
+    public void multiplyStackNumbers() { //Rechenoperation: *
         confirmNumber();
         stack_txt.setText(checkMessage(model.multiplyStackNumbers()));
     }
 
     @FXML
-    public void divideStackNumbers() {
+    public void divideStackNumbers() { //Rechenoperation: /
         confirmNumber();
         stack_txt.setText(checkMessage(model.divideStackNumbers()));
     }
 
     @FXML
-    public void swapStackTop() {
+    public void swapStackTop() { //Tauscht die oberen zwei Wertw
         confirmNumber();
         stack_txt.setText(checkMessage(model.swapStackTop()));
     }
 
     @FXML
-    public void invertStackTop() {
+    public void invertStackTop() { //Kehwert der oberen Zahl
         confirmNumber();
         stack_txt.setText(checkMessage(model.invertStackTop()));
     }

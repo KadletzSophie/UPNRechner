@@ -2,6 +2,11 @@ package sample;
 
 import java.util.EmptyStackException;
 
+/**
+ * @author Sophie Kadletz
+ * @version 21.12.2020
+ */
+
 public class UPNModel {
     private DoubleStack numbers;
     private double tmp;
