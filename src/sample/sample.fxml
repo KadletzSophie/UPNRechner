@@ -1,8 +1,76 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.39996337890625" minWidth="10.0" prefWidth="104.20001220703125" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="121.79998779296875" minWidth="10.0" prefWidth="121.79998779296875" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.20001220703125" minWidth="10.0" prefWidth="95.20001220703125" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.20001220703125" minWidth="10.0" prefWidth="144.79998779296875" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TextField fx:id="eingabe_txt" GridPane.columnSpan="5" />
+        <TextArea fx:id="stack_txt" prefHeight="299.0" prefWidth="113.0" GridPane.rowIndex="1" GridPane.rowSpan="4" />
+        <Button fx:id="bt_7" alignment="CENTER" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="bt_4" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <Button fx:id="bt_1" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="bt_0" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Button fx:id="bt_8" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="8" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <Button fx:id="bt_5" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Button fx:id="bt_2" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Button fx:id="komma_bt" mnemonicParsing="false" onAction="#enterComma" prefHeight="54.0" prefWidth="74.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <Button fx:id="bt_9" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="9" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <Button fx:id="bt_6" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="6" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+        <Button fx:id="bt_3" mnemonicParsing="false" onAction="#enterNumber" prefHeight="54.0" prefWidth="74.0" text="3" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        <Button fx:id="vorzeichen_bt" mnemonicParsing="false" onAction="#enterSign" prefHeight="54.0" prefWidth="74.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="enter_bt" mnemonicParsing="false" onAction="#addNumber" prefHeight="43.0" prefWidth="152.0" text="Enter" GridPane.columnSpan="2" />
+                <Button fx:id="c_bt" mnemonicParsing="false" onAction="#clearStack" prefHeight="43.0" prefWidth="152.0" text="C" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <Button fx:id="ce_bt" mnemonicParsing="false" onAction="#clearEnteredNumber" prefHeight="43.0" prefWidth="152.0" text="CE" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+        <GridPane GridPane.columnIndex="4" GridPane.rowIndex="3" GridPane.rowSpan="2">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="plus_bt" mnemonicParsing="false" onAction="#addStackNumbers" prefHeight="35.0" prefWidth="70.0" text="+" />
+                <Button fx:id="mal_bt" mnemonicParsing="false" onAction="#multiplyStackNumbers" prefHeight="35.0" prefWidth="70.0" text="*" GridPane.rowIndex="1" />
+                <Button fx:id="kehrwert_bt" mnemonicParsing="false" onAction="#invertStackTop" prefHeight="35.0" prefWidth="70.0" text="1/x" GridPane.rowIndex="2" />
+                <Button fx:id="minus_bt" alignment="CENTER" mnemonicParsing="false" onAction="#substractStackNumbers" prefHeight="35.0" prefWidth="70.0" text="-" GridPane.columnIndex="1" />
+                <Button fx:id="durch_bt" mnemonicParsing="false" onAction="#divideStackNumbers" prefHeight="35.0" prefWidth="70.0" text="/" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button fx:id="vertauschen_bt" mnemonicParsing="false" onAction="#swapStackTop" prefHeight="35.0" prefWidth="70.0" text="x &lt;-&gt; y" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+        </GridPane>
+    </children>
 </GridPane>
