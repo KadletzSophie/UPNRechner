@@ -3,6 +3,11 @@ package sample;
 import java.util.Iterator;
 import java.util.Stack;
 
+/**
+ * @author Sophie Kadletz
+ * @version 21.12.2020
+ */
+
 public class DoubleStack extends Stack<Double> {
     public DoubleStack() {
         super();
